@@ -1,7 +1,6 @@
 # RAG 에이전트 - 검색 기반 질문 응답 시스템
 import getpass
 import os
-from pprint import pprint
 from typing import Dict, List
 
 from langchain_community.document_loaders import WebBaseLoader
@@ -349,6 +348,7 @@ workflow.add_edge("failed", END)
 # 워크플로우 컴파일
 app = workflow.compile()
 
+"""
 # 테스트 실행
 inputs = {"question": "What is prompt?"}
 final_value = None
@@ -360,6 +360,7 @@ for output in app.stream(inputs):
 
 if final_value:
     pprint(final_value["generation"])
+"""
 
 """
 # 그래프 시각화 생성
